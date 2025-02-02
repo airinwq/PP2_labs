@@ -43,3 +43,60 @@ thisset = {"apple", "banana", "cherry"}
 for x in thisset:
   print(x)
 
+#dictionaries
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(thisdict)
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(thisdict["brand"])
+
+#while loops
+
+i = 1
+while i < 6:
+  print(i)
+  i += 1
+
+i = 1
+while i < 6:
+  print(i)
+  if i == 3:
+    break
+  i += 1
+
+#for loops
+
+fruits = ["apple", "banana", "cherry"]
+for x in fruits:
+  print(x)
+
+for x in "banana":
+  print(x)
+
+fruits = ["apple", "banana", "cherry"]
+for x in fruits:
+  print(x)
+  if x == "banana":
+    break
+
+#arrays
+
+cars = ["Ford", "Volvo", "BMW"]
+
+x = cars[0]
+
+cars[0] = "Toyota"
+
+x = len(cars)
+
+
+
