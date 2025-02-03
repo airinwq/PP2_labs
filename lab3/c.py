@@ -2,51 +2,45 @@
 
 #1
 
-def grams_to_ounces(grams):
-    ounces = 28.3495231 * grams
-    return ounces
+def convert(gram):
+    ounces=gram*28,3495231
+    print(ounces)
 
-grams = float(input())
-print(grams, round(grams_to_ounces(grams), 2))
+gram=int(input())
+convert(gram)
 
 #2
 
-def fahrenheit_to_celsius(fahrenheit):
-    celsius = (5 / 9) * (fahrenheit - 32)
-    return celsius
+def convert(Fah):
+    temperature=(5/9)*(Fah-32)
+    print(temperature)
 
-fahrenheit = float(input())
-print(fahrenheit, round(fahrenheit_to_celsius(fahrenheit), 2))
+Fah=int(input())
+convert(Fah)
 
 
 #3
 
 def solve(numheads, numlegs):
-    for chickens in range(numheads + 1):
-        rabbits = numheads - chickens
-        if (chickens * 2 + rabbits * 4) == numlegs:
-            return chickens, rabbits
-    return None
+    rabbits=(numlegs-(2*numheads))/2
+    chickens=numheads-rabbits
+    print(rabbits,chickens)
 
-numheads = 35
-numlegs = 94
-result = solve(numheads, numlegs)
-if result:
-    print(result[0], result[1])
-else:
-    print("Решение не найдено")
+numheads=int(input())
+numlegs=int(input())
+solve(numheads,numlegs)
 
 #4
 
-def is_prime(nums):
-    prime_list = []
+def filter_prime(nums):
+    list=[]
     for i in nums:
-        if i % 2 == 0:
-            prime_list.append(i)
-    return prime_list
+        if i%2==0:
+            list.append(i)
+    return list
 
-entered_list = list(map(int, input("Enter numbers separated by space: ").split()))
-print(is_prime(entered_list))
+a_list = list(map(int, input().split()))
+print(filter_prime(a_list))
 
 #5
 
@@ -166,6 +160,86 @@ guess_num()
 
 
 #functions2
+
+# Dictionary of movies
+
+movies = [
+{
+"name": "Usual Suspects", 
+"imdb": 7.0,
+"category": "Thriller"
+},
+{
+"name": "Hitman",
+"imdb": 6.3,
+"category": "Action"
+},
+{
+"name": "Dark Knight",
+"imdb": 9.0,
+"category": "Adventure"
+},
+{
+"name": "The Help",
+"imdb": 8.0,
+"category": "Drama"
+},
+{
+"name": "The Choice",
+"imdb": 6.2,
+"category": "Romance"
+},
+{
+"name": "Colonia",
+"imdb": 7.4,
+"category": "Romance"
+},
+{
+"name": "Love",
+"imdb": 6.0,
+"category": "Romance"
+},
+{
+"name": "Bride Wars",
+"imdb": 5.4,
+"category": "Romance"
+},
+{
+"name": "AlphaJet",
+"imdb": 3.2,
+"category": "War"
+},
+{
+"name": "Ringing Crime",
+"imdb": 4.0,
+"category": "Crime"
+},
+{
+"name": "Joking muck",
+"imdb": 7.2,
+"category": "Comedy"
+},
+{
+"name": "What is the name",
+"imdb": 9.2,
+"category": "Suspense"
+},
+{
+"name": "Detective",
+"imdb": 7.0,
+"category": "Suspense"
+},
+{
+"name": "Exam",
+"imdb": 4.2,
+"category": "Thriller"
+},
+{
+"name": "We Two",
+"imdb": 7.2,
+"category": "Romance"
+}
+]
 
 #1
 
