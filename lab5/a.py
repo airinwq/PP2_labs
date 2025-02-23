@@ -1,82 +1,65 @@
 #Regex
 
-#1
-
 import re
-
-def match_pattern(string):
-    pattern = r'^ab*$'  
-    if re.fullmatch(pattern, string):
-        return "Match found"
-    else:
-        return "No match"
-
-
-test_strings = ["a", "ab", "abb", "abbb", "ac", "ba", "abc"]
-for s in test_strings:
-    print(f"'{s}': {match_pattern(s)}")
+#1
+enter = input("enter: ")
+text = r"ab*"
+match = re.findall(text, enter)
+print("'a' followed by zero or more 'b''s")
+print(match)
 
 #2
-
-import re
-
-def match_pattern(string):
-    pattern = r'^abb{2,3}$'  
-    if re.fullmatch(pattern, string):
-        return "Match found"
-    else:
-        return "No match"
-
-test_strings = ["a", "ab", "abb", "abbb", "abbbb", "ac", "ba", "abc"]
-for s in test_strings:
-    print(f"'{s}': {match_pattern(s)}")
+enter = input("enter ")
+text = r"ab{2,3}"
+match = re.findall(text, enter)
+print(match)
 
 #3
-
-import re
-
-def match_pattern(string):
-    pattern = r'^[a-z]+_[a-z]+$'  
-    if re.fullmatch(pattern, string):
-        return "Match found"
-    else:
-        return "No match"
-
-
-test_strings = ["hello_world", "test_case", "no_match", "UPPER_CASE", "under_score_"]
-for s in test_strings:
-    print(f"'{s}': {match_pattern(s)}")
+enter = input("enter ")
+text = r"[a-z]+(?:_[a-z]+)+"
+match = re.findall(text, enter)
+print(match)
 
 #4
-
-import re
-
-def match_pattern(string):
-    pattern = r'^[A-Z][a-z]+$'  
-    if re.fullmatch(pattern, string):
-        return "Match found"
-    else:
-        return "No match"
-
-
-test_strings = ["Hello", "Test", "noMatch", "UPPERCASE", "CamelCase"]
-for s in test_strings:
-    print(f"'{s}': {match_pattern(s)}")
+enter = input("enter ")
+text = r"[A-Z][a-z]+"
+match = re.findall(text, enter)
+print(match)
 
 #5
+enter = input("enter ")
+text = r"a.*b$"
+match = re.findall(text, enter)
+print(match)
 
-import re
+#6
+enter = input("enter ")
+text = r",|/.|\s"
+replaceto = ":"
+match = re.sub(text, replaceto, enter)
+print(match)
 
-def match_pattern(string):
-    pattern = r'^a.*b$'  
-    if re.fullmatch(pattern, string):
-        return "Match found"
-    else:
-        return "No match"
+#7
+enter = input("enter ")
+mylist = re.split('_', enter)
+text = mylist[0]
+for i in range(1, len(mylist)):
+    text += mylist[i].capitalize()
+print(text)
 
+#8
+enter = input("enter ")
+match = re.findall('[A-Z][a-z]+', enter)
+print(match)
 
-test_strings = ["ab", "axb", "a123b", "a_b", "bba", "abc"]
-for s in test_strings:
-    print(f"'{s}': {match_pattern(s)}")
+#9
+enter = input("enter ")
+match = re.sub('([a-z])([A-Z])', r'\1 \2', enter)
+print(match)
 
-
+#10
+enter = input("enter ")
+match = re.sub('([a-z])([A-Z])', r'\1 \2', enter)
+match1 = re.sub(' ', r'_', match)
+match2 = match1.lower()
+print(match2)
